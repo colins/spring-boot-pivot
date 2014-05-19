@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'idea'
+apply plugin: 'spring-boot'
 
 idea {
    module {
@@ -9,9 +10,27 @@ idea {
   }
 }
 
+buildscript {
+    def springBootVersion = "1+"
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        classpath "org.springframework:springloaded:1.2.0.RELEASE"
+    }
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    def springBootVersion = "1+"
+
+    compile "org.springframework.boot:spring-boot:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    compile 'org.codehaus.groovy:groovy-all:2.3.0'
 }
