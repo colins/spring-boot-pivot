@@ -3,9 +3,12 @@ apply plugin: 'groovy'
 apply plugin: 'spring-boot'
 
 buildscript {
-    def springBootVersion = "1+"
+    def springBootVersion = "1.1.0.BUILD-SNAPSHOT"
 
     repositories {
+        maven {
+            url = "http://repo.spring.io/repo"
+        }
         mavenCentral()
     }
 
@@ -17,15 +20,18 @@ buildscript {
 }
 
 repositories {
+    maven {
+        url = "http://repo.spring.io/repo"
+    }
     mavenCentral()
 }
 
 dependencies {
-    def springBootVersion = "1+"
+    def springBootVersion = "1.1.0.BUILD-SNAPSHOT"
 
     compile "org.springframework.boot:spring-boot:${springBootVersion}"
     compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
-    compile "org.codehaus.groovy:groovy-all:2.3.0"
+    compile "org.codehaus.groovy:groovy-all:2.3.1"
     compile "postgresql:postgresql:9.1-901.jdbc4"
 }
 
