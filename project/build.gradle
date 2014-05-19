@@ -39,7 +39,7 @@ flyway {
 def n = ""
 
 task flywayCreate {
-    file = new File("./src/main/resources/db/migration/V${new Date().getTime()}__${n}.sql")
+    def file = new File("./src/main/resources/db/migration/V${new Date().getTime()}__${n}.sql")
     file.createNewFile()
 }
 
