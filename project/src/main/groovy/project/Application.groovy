@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 class Application {
     static main(args) {
+        System.out.println
         SpringApplication.run(Application.class, args);
     }
 }
