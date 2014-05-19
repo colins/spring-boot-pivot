@@ -36,13 +36,10 @@ flyway {
     password = ''
 }
 
-def n = ""
-
-task flywayCreate {
-    def file = new File("./src/main/resources/db/migration/V${new Date().getTime()}__${n}.sql")
+task flywayCreate << {
+    def file = new File("./src/main/resources/db/migration/V${new Date().getTime()}__${title}.sql")
     file.createNewFile()
 }
-
 
 apply plugin: 'idea'
 idea {
