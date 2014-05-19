@@ -1,5 +1,13 @@
 apply plugin: 'java'
 apply plugin: 'groovy'
+apply plugin: 'idea'
+
+idea {
+   module {
+      inheritOutputDirs = false
+      outputDir = file("$buildDir/classes/main/")
+  }
+}
 
 repositories {
     mavenCentral()
