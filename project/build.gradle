@@ -35,6 +35,7 @@ dependencies {
 
     compile "org.springframework.boot:spring-boot:${springBootVersion}"
     compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}"
     compile "org.codehaus.groovy:groovy-all:2.3.1"
     compile "postgresql:postgresql:9.1-901.jdbc4"
 
@@ -42,6 +43,7 @@ dependencies {
     testCompile "org.fluentlenium:fluentlenium-festassert:0.10.0"
     testCompile 'junit:junit:4.11'
     testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+    testCompile 'com.googlecode.flyway:flyway-core:2.3.1'
 }
 
 apply plugin: 'flyway'
