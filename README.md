@@ -2,27 +2,29 @@
 
 A quick way to get started writing a Spring Boot application.
 
-Goals:
+## Goals: 
 
 - Developers should be able to download and run this application w/o additional configuration
 - Common stack decisions should already be configured (database, template language, logging, testing etc.)
 
-#
+## Installation:
 
-Installation:
+    brew install gradle;
+    git clone https://github.com/pivotal/spring-boot-pivot.git;
+    cd spring-boot-pivot/project;
+    gradle bootRun;
+    open http://localhost:8080/;
 
-brew install gradle;
-git clone https://github.com/pivotal/spring-boot-pivot.git
-cd spring-boot-pivot/project;
-gradle bootRun;
-open http://localhost:8080/
+## Intellij
 
-IntelliJ import
-Follow link to import gradle project
-Check option - Create directories for empty content roots automatically
-If an error box appears with 'unable to load class org.gradle.plugins.ide.internal.idedependenciesextractor' then upgrade to Intellij to 13.1
+- IntelliJ import
+- Follow link to import gradle project
+- Check option - Create directories for empty content roots automatically
+- If an error box appears with 'unable to load class org.gradle.plugins.ide.internal.idedependenciesextractor' then upgrade to Intellij to 13.1
 
 ---
+
+## To do list:
 
 - ability to create controllers backed by a template language
 - ability to create entities with a database mapping solution
